@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Tower Crane – WebGL</title>
+  <style>
+    body {
+      margin: 0;
+      background: #1f2933;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    #container {
+      position: relative;
+    }
+
+    canvas {
+      border: 1px solid #444;
+    }
+
+    #controls {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      background: rgba(20, 30, 50, 0.9);
+      padding: 10px;
+      border-radius: 8px;
+      color: #c7d2fe;
+      font-family: Arial;
+      font-size: 13px;
+      width: 160px;
+    }
+
+    #controls label {
+      display: block;
+      margin-top: 6px;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="container">
+    <canvas id="glcanvas" width="900" height="600"></canvas>
+
+    <!-- UI BOX INSIDE CANVAS AREA -->
+    <div id="controls">
+      <button id="toggleAnim">Pause</button>
+      <button id="toggleProj">Orthographic</button>
+
+      <label>
+        Speed
+        <input type="range" id="speed" min="0.2" max="3" step="0.1" value="1">
+      </label>
+
+      <button id="toggleDir">Reverse</button>
+    </div>
+  </div>
+
+  <script src="gl-matrix-min.js"></script>
+  <script src="main.js"></script>
+</body>
+</html>
